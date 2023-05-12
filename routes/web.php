@@ -31,3 +31,10 @@ use Illuminate\Support\Facades\Route;
 //         echo "My name is {$name} age is {$age} year old";
 //     }
 // }
+
+Route::get('devinfo', 'App\Http\Controllers\StaffController@devInfo')-> name('devinfo.all');
+Route::get('getdev', 'App\Http\Controllers\StaffController@getDev')-> name('get.dev');
+
+Route::get('', function(){
+
+});

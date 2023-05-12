@@ -123,4 +123,26 @@
 
 
 
+// Laravel part 10 ( Route with controller 2  )
+//=================================================
 
+// old laravel
+//====================
+// Route::get('devinfo', [App\Http\Controllers\StaffController::class, 'devinfo']);
+// Route::get('getdev', [App\Http\Controllers\StaffController::class, 'gerdev']);
+
+// New laravel
+//====================
+// Route::get('devinfo', [App\Http\Controllers\StaffController::class, 'devinfo']);
+// Route::get('getdev', [App\Http\Controllers\StaffController::class, 'gerdev']);
+
+// New laravel use name
+//========================
+// Route::get('devinfo', 'App\Http\Controllers\StaffController@devInfo')-> name('devinfo.all');
+// Route::get('getdev', 'App\Http\Controllers\StaffController@getDev')-> name('get.dev');
+
+// Closer Route
+//========================
+// Route::get('', function(){
+
+// });
