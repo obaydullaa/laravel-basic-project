@@ -164,3 +164,10 @@
  *  1. Plean Route
  *  2. Resource Route 
  */
+
+
+/**
+ * Laravel part 12 ( database connection )
+ * ===========================================================================
+ * 
+ */
