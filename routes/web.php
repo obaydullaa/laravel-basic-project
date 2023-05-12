@@ -32,9 +32,11 @@ use Illuminate\Support\Facades\Route;
 //     }
 // }
 
-Route::get('devinfo', 'App\Http\Controllers\StaffController@devInfo')-> name('devinfo.all');
-Route::get('getdev', 'App\Http\Controllers\StaffController@getDev')-> name('get.dev');
+// Route::get('devinfo', 'App\Http\Controllers\StaffController@devInfo')-> name('devinfo.all');
+// Route::get('getdev', 'App\Http\Controllers\StaffController@getDev')-> name('get.dev');
 
-Route::get('', function(){
+// Route::get('', function(){
 
-});
+// });
+
+Route::resource('student', 'App\Http\Controllers\StudentController');

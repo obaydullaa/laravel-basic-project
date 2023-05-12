@@ -1,17 +1,19 @@
 <?php 
 
-// php Artisant command list
-//=========================================
+/**
+ * Laravel part 11 ( resource controller  )
+ * ===========================================================================
+ */
+
 // 1. php artisan create-project laravel/laravel my-pp
-// 2. php artisan make:controller StudentController
-// 2. php artisan make:controller StaffConroller --resource  // create all features
+// 2. php artisan make:controller StudentController  // plean controller
+// 3. php artisan make:controller StaffConroller --resource  // create all features
+// 4. php artisan r:l  // create all features
 
-
-
-
-
-//Laravel part 03 (  MVC )
-//================================
+/**
+ * Laravel part 03 (  MVC )
+ * ===========================================================================
+ */
 
 // Model: This component represents the data and the business logic of the application. It is responsible for handling database operations, data validation, and any other business logic related to the data.
 
@@ -20,8 +22,10 @@
 // Controller: This component acts as an intermediary between the Model and the View. It is responsible for handling user input, making calls to the Model to fetch or manipulate data, and passing that data to the View to render the appropriate response.
 
 
-//Laravel part 04 ( project structure )
-//=================================================
+/**
+ * Laravel part 04 ( project structure )
+ * ===========================================================================
+ */
 
 // Discus laravel project structure
 
@@ -37,8 +41,10 @@
     // });
 
 
-// Laravel part 06 ( prefix route _ group route )
-//=================================================
+/**
+ * Laravel part 06 ( prefix route _ group route )
+ * ===========================================================================
+ */
 
 // Route::prefix('student')->group(function(){
 
@@ -112,8 +118,10 @@
 // create controller and resource controller
 
 
-// Laravel part 09 ( Route with controller  )
-//=================================================
+/**
+ * Laravel part 09 ( Route with controller  )
+ * ===========================================================================
+ */
 
 // Route::get('student', 'App\Http\Controllers\studentController@ageCal');
  
@@ -122,9 +130,10 @@
 // });
 
 
-
-// Laravel part 10 ( Route with controller 2  )
-//=================================================
+/**
+ * Laravel part 10 ( Route with controller 2  )
+ * ===========================================================================
+ */
 
 // old laravel
 //====================
@@ -146,3 +155,12 @@
 // Route::get('', function(){
 
 // });
+
+/**
+ * Laravel part 11 ( resource controller  )
+ * ===========================================================================
+ * php artisan make:controller StaffConroller --resource 
+ * Route 2 way
+ *  1. Plean Route
+ *  2. Resource Route 
+ */
