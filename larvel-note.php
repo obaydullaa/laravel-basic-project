@@ -204,3 +204,17 @@
  *  php artisan migrate:refresh  // Update all Migrate { normaly all data delete}
  * 
  */
+    /**
+     * Run the migrations.
+     */
+    // public function up(): void
+    // {
+    //     Schema::create('staff', function (Blueprint $table) {
+    //         $table->id();
+    //         $table->string('name', 100);
+    //         $table->string('email', 100) -> unique();
+    //         $table->unsignedInteger('age', 3);
+    //         $table->longText('Desc');
+    //         $table->timestamps();
+    //     });
+    // }

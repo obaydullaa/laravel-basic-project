@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 100);
             $table->string('email', 100) -> unique();
-            $table->integer('age', 3);
+            $table->unsignedInteger('age', 3);
             $table->longText('Desc');
             $table->timestamps();
         });
