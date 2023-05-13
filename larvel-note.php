@@ -10,6 +10,8 @@
 // 3. php artisan make:controller StaffConroller --resource  // create all features
 // 4. php artisan r:l  // create all features
 // 5. php artisan make:model Student -m // create model and migration
+// 6. php artisan migrate // create table
+// 7. php artisan migrate:refresh // Update Migrate
 
 /**
  * Laravel part 03 (  MVC )
@@ -166,12 +168,6 @@
  *  2. Resource Route 
  */
 
-
-/**
- * Laravel part 12 ( database connection )
- * ===========================================================================
- * 
- */
 // connection database
 // Route::resource('student', 'App\Http\Controllers\StudentController');
 
@@ -180,8 +176,31 @@
  * ===========================================================================
  * 
  * Models: Models class হল ডাটাবেজ থেকে ডাটা ধরে আনা, ইডিট করা, ডিলেট করা সকল কাজ করবে । Complete the all feature of CURD and more.
- * Migration: হুলো আমরা যে টেবিল বানাব সেইগুলো ম্যানেজ করাই হলো Migration. টেবিল দেখতে কেমন হবে, কয়টা রো, কলাম থাকবে । অথব বালা যায় টেবিল এর ডাটা গুলো ম্যানেজ করা ।
+ * Migration: Migration er kaj holo table structure golo kamon hobe seta bole dibe. হলো আমরা যে টেবিল বানাব সেইগুলো ম্যানেজ করাই হলো Migration. টেবিল দেখতে কেমন হবে, কয়টা রো, কলাম থাকবে । অথব বালা যায় টেবিল এর ডাটা গুলো ম্যানেজ করা ।
  * 
  * php artisan make:model Student -m // create model and migration
  */
 
+
+
+     
+    // public function up(): void
+    // {
+    //     Schema::create('students', function (Blueprint $table) {
+    //         $table->id();
+    //         $table->string('name');
+    //         $table->string('email') -> unique();
+    //         $table->integer('age');
+    //         $table->boolean('status') -> default(1);
+    //         $table->boolean('trash') -> default(0);
+    //         $table->timestamps();
+    //     });
+    // }
+
+
+/**
+ * Laravel part 15 ( column type )
+ * ===========================================================================
+ *  php artisan migrate:refresh  // Update all Migrate { normaly all data delete}
+ * 
+ */
