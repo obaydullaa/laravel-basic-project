@@ -9,6 +9,7 @@
 // 2. php artisan make:controller StudentController  // plean controller
 // 3. php artisan make:controller StaffConroller --resource  // create all features
 // 4. php artisan r:l  // create all features
+// 5. php artisan make:model Student -m // create model and migration
 
 /**
  * Laravel part 03 (  MVC )
@@ -171,3 +172,16 @@
  * ===========================================================================
  * 
  */
+// connection database
+// Route::resource('student', 'App\Http\Controllers\StudentController');
+
+/**
+ * Laravel part 13 ( model migration 1 )
+ * ===========================================================================
+ * 
+ * Models: Models class হল ডাটাবেজ থেকে ডাটা ধরে আনা, ইডিট করা, ডিলেট করা সকল কাজ করবে । Complete the all feature of CURD and more.
+ * Migration: হুলো আমরা যে টেবিল বানাব সেইগুলো ম্যানেজ করাই হলো Migration. টেবিল দেখতে কেমন হবে, কয়টা রো, কলাম থাকবে । অথব বালা যায় টেবিল এর ডাটা গুলো ম্যানেজ করা ।
+ * 
+ * php artisan make:model Student -m // create model and migration
+ */
+
