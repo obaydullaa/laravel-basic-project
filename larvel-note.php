@@ -225,6 +225,42 @@
  * নিউ কলাম এড করতে চাইল ডাটাবেজ থেকে migrations এবং আমাদের টেবিলটি ডিলেট করতে হবে । এর পর php artisan migrate করতে হবে । 
  * 
 */
+// Schema::create('staff', function (Blueprint $table) {
+//     $table->id();
+//     $table->string('name', 100) -> nullable();
+//     $table->string('email', 100) -> unique();
+//     $table->string('cell', 100) -> unique();
+//     $table->integer('age') -> unsigned();
+//     $table->integer('income') -> unsigned();
+//     $table->string('school_id');
+//     $table->longText('Desc') -> default('This is default value');
+//     $table->timestamps();
+// });
+
+
+/**
+ * Laravel part 17 ( model setup )
+ * ===========================================================================
+ * 
+ * 
+ * 
+*/
+// আমরা চাইলে Student টেবিল থেকে stu টেবিলে ডাটা পাঠাইতে পারি । 
+
+// class Student extends Model
+// {
+    // use HasFactory;
+
+    // protected $table = 'students';
+// We decide where column send data otherwise don't send data
+    // protected $fillable = ['name', 'age', 'status', 'trash'];
+
+// We send data every column
+    // protected $guarded = [];
+
+// If we need any column data don't send just name in empty array
+    // protected $guarded = ['email', 'cell'];
+// }
 
 
 
