@@ -11,7 +11,8 @@
 // 4. php artisan r:l  // create all features
 // 5. php artisan make:model Student -m // create model and migration
 // 6. php artisan migrate // create table
-// 7. php artisan migrate:refresh // Update Migrate
+// 7. php artisan migrate:refresh // Update Migrate all column
+// 8. php artisan migrate:fresh // drop all column and added new column
 
 /**
  * Laravel part 03 (  MVC )
@@ -198,12 +199,6 @@
     // }
 
 
-/**
- * Laravel part 15 ( column type )
- * ===========================================================================
- *  php artisan migrate:refresh  // Update all Migrate { normaly all data delete}
- * 
- */
     /**
      * Run the migrations.
      */
@@ -218,3 +213,21 @@
     //         $table->timestamps();
     //     });
     // }
+
+
+
+/**
+ * Laravel part 16 ( migration  )
+ * ===========================================================================
+ *  php artisan migrate:refresh // Update Migrate all column
+ *  php artisan migrate:fresh // drop all column and added new column
+ * 
+ * নিউ কলাম এড করতে চাইল ডাটাবেজ থেকে migrations এবং আমাদের টেবিলটি ডিলেট করতে হবে । এর পর php artisan migrate করতে হবে । 
+ * 
+*/
+
+
+
+
+
+

@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
+            $table->string('name', 100) -> nullable();
             $table->string('email', 100) -> unique();
-            $table->unsignedInteger('age', 3);
-            $table->longText('Desc');
+            $table->string('cell', 100) -> unique();
+            $table->integer('age') -> unsigned();
+            $table->integer('income') -> unsigned();
+            $table->string('school_id');
+            $table->longText('Desc') -> default('This is default value');
             $table->timestamps();
         });
     }
