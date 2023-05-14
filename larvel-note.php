@@ -9,10 +9,13 @@
 // 2. php artisan make:controller StudentController  // plean controller
 // 3. php artisan make:controller StaffConroller --resource  // create all features
 // 4. php artisan r:l  // create all features
-// 5. php artisan make:model Student -m // create model and migration
-// 6. php artisan migrate // create table
-// 7. php artisan migrate:refresh // Update Migrate all column
-// 8. php artisan migrate:fresh // drop all column and added new column
+// 5. php artisan make:model   // create model
+// 6. php artisan make:migration   // create migration
+// 7. php artisan make:migration create_orders_table   // create table
+// 8. php artisan make:model Student -m // create model and migration
+// 9. php artisan migrate // create table
+// 10. php artisan migrate:refresh // Update Migrate all column
+// 11. php artisan migrate:fresh // drop all column and added new column
 
 /**
  * Laravel part 03 (  MVC )
@@ -238,13 +241,6 @@
 // });
 
 
-/**
- * Laravel part 17 ( model setup )
- * ===========================================================================
- * 
- * 
- * 
-*/
 // আমরা চাইলে Student টেবিল থেকে stu টেবিলে ডাটা পাঠাইতে পারি । 
 
 // class Student extends Model
@@ -264,6 +260,17 @@
 
 
 
+/**
+ * Laravel part 18 ( model _ migration  )
+ * ===========================================================================
+ * migration ফাইলের মূল কাজ হলো ডাটাবেজে টেবিল তৈরি করা । 
+ * model এর কাজ ক্লাস গুলো 
+ * php artisan make:model   // create model
+ * php artisan make:migration   // create migration
+ * php artisan make:migration create_orders_table   // create table
+ * 
+ * 
+*/
 
 
 
