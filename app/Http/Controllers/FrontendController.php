@@ -29,6 +29,6 @@ class FrontendController extends Controller
 */
     public function contactPageShow()
     {
-        return view('contact');
+        return view('pages/contact');
     }
 }

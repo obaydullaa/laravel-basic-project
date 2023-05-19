@@ -273,7 +273,6 @@
 */
 
 
-
 /**
  * Laravel part 19 ( view 1 )
  * ===========================================================================
@@ -291,5 +290,78 @@
 //     return view('about');
 // });
 
+/**
+ * Laravel part 20 ( view 2 )
+ * ===========================================================================
+ * View is any pages...
+ * 
+ * 
+*/
+// Route::get('/', function(){
+//     return view('homepage');
+// });
+// Route::get('/contact', function(){
+//     return view('contact');
+// });
+// Route::get('/about', function(){
+//     return view('about');
+// });
+
+// web.php
+//=============================
+
+// Route::get('/',[App\Http\Controllers\FrontendController::class, 'homePageShow']);
+// Route::get('/contact',[App\Http\Controllers\FrontendController::class, 'contactPageShow']);
+// Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutPageShow']);
 
 
+// Controller
+//=====================
+
+// class FrontendController extends Controller
+// {
+    
+// /**
+//  * Home Page Show
+//  * 
+// */
+//     public function homePageShow()
+//     {
+//         return view('homepage');
+//     }
+// /**
+//  * About Page Show
+//  * 
+// */
+//     public function aboutPageShow()
+//     {
+//         return view('about');
+//     }
+// /**
+//  * Contact Page Show
+//  * 
+// */
+//     public function contactPageShow()
+//     {
+//         return view('pages/contact');
+//     }
+// }
+
+
+// resource -> pages:-
+//=============================
+
+    // homepage.blade.php 
+    //================================
+        // <h2>This is Home Page </h2>
+        // <p>Hello from Home Page...</p>
+
+    // aboutpage.blade.php 
+    //================================
+        // <h2>This is About Page </h2>
+        // <p>Hello from About Page...</p>
+
+    // contactpage.blade.php 
+    //================================
+        // <h2>This is Contact Page </h2>
+        // <p>Hello from Contact Page...</p>
