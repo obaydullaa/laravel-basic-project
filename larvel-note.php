@@ -68,12 +68,12 @@
 // });
 
 
-// Route::get()      //  When get some data
-// Route::post()      // when data push data pase from data
-// Route::put()      //   when data update or eddit we need put/patch
-// Route::patch()      // when data update or eddit we need put/patch
-// Route::delete()      //  when delte data
-// Route::resource()      //  all rout in here
+// Route::get()     ---> // When get some data
+// Route::post()    ---> // when data push data pase from data
+// Route::put()     ---> // when data update or eddit we need put/patch
+// Route::patch()   ---> // when data update or eddit we need put/patch
+// Route::delete()  ---> //  when delte data
+// Route::resource()---> //  all rout in here
 
 // Name Route
 // Route::get('all', function(){
@@ -271,6 +271,25 @@
  * 
  * 
 */
+
+
+
+/**
+ * Laravel part 19 ( view 1 )
+ * ===========================================================================
+ * View is any pages...
+ * 
+ * 
+*/
+// Route::get('/', function(){
+//     return view('homepage');
+// });
+// Route::get('/contact', function(){
+//     return view('contact');
+// });
+// Route::get('/about', function(){
+//     return view('about');
+// });
 
 
 

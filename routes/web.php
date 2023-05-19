@@ -13,30 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('student', 'App\Http\Controllers\studentController@ageCal');
+// Route::get('/', function(){
+//     return view('welcome');
+// } );
 
-
- 
-// Route::namespace('App\Http\Controllers') -> prefix('b129') -> group(function() {
-//     Route::get('student/{name}/{year}', 'studentController@ageCal');
-// });
-
-// controller
-// class StudentController extends Controller
-// {
-//     //
-//     public function ageCal($name, $year) {
-        
-//         $age = 2023 - $year;
-//         echo "My name is {$name} age is {$age} year old";
-//     }
-// }
-
-// Route::get('devinfo', 'App\Http\Controllers\StaffController@devInfo')-> name('devinfo.all');
-// Route::get('getdev', 'App\Http\Controllers\StaffController@getDev')-> name('get.dev');
-
-// Route::get('', function(){
-
-// });
-
-Route::resource('student', 'App\Http\Controllers\StudentController');
+Route::get('/',[App\Http\Controllers\FrontendController::class, 'homePageShow']);
+Route::get('/contact',[App\Http\Controllers\FrontendController::class, 'contactPageShow']);
+Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutPageShow']);
