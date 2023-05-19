@@ -11,24 +11,15 @@ class FrontendController extends Controller
  * Home Page Show
  * 
 */
-    public function homePageShow()
+    public function frontpage()
     {
-        return view('homepage');
+        return view('front-page');
     }
-/**
- * About Page Show
- * 
-*/
-    public function aboutPageShow()
+    
+    public function hello()
     {
-        return view('about');
+        return view('hello');
     }
-/**
- * Contact Page Show
- * 
-*/
-    public function contactPageShow()
-    {
-        return view('pages/contact');
-    }
+
+
 }

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // } );
 
-Route::get('/',[App\Http\Controllers\FrontendController::class, 'homePageShow']);
-Route::get('/contact',[App\Http\Controllers\FrontendController::class, 'contactPageShow']);
-Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutPageShow']);
+Route::get('/',[App\Http\Controllers\FrontendController::class, 'frontpage']);
+Route::get('/hello',[App\Http\Controllers\FrontendController::class, 'hello']);
+
+
