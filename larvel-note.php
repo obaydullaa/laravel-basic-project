@@ -389,3 +389,25 @@
 // {{-- <a class="nav-link active" aria-current="page" href="{{ URL::to('/') }}">Home</a> --}}
 // {{-- <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a> --}}
 
+
+/**
+ * Laravel part 23 ( Blade syntax )
+ * ==============================================================
+ * {{}} Its use for echo.
+{{'My name is obaydulla'}} // All times
+{{!! 'My name is obaydulla'!!}} // some times
+
+@php
+$age = 10;
+@endphp
+
+@if ($age >= 20)
+    {{'You are done'}}
+@else 
+    {{'You are not dome.'}}
+@endif
+@for ($i = 0; $i <= 10; $i++)"
+    {{"The value is " . $i  }} <br>
+@endfor
+*/
+// 

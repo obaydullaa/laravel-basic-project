@@ -20,4 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[App\Http\Controllers\FrontendController::class, 'frontpage'])->name('home');
 Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutpage'])->name('about');
 
-
+Route::get('test', function() {
+    return view('test');
+});
