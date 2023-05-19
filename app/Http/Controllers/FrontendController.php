@@ -13,7 +13,7 @@ class FrontendController extends Controller
 */
     public function frontpage()
     {
-        return view('front-page');
+        return view('frontpage');
     }
     
     public function aboutpage()

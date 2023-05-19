@@ -371,4 +371,21 @@
  * Laravel part 21 ( view 3 )
  * ===========================================================================
  * 
+ * index.html file added in view and controller call ..
+ * 
 */
+
+        
+/**
+ * Laravel part 22 ( url, URL to, asset, route )
+ * ==============================================================
+ * url : use for menu
+ * url, asset, UEL::to : call route name
+ * route : use for name route, example: 
+ *           Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutpage'])->name('about');
+*/
+// {{-- <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a> --}}
+// {{-- <a class="nav-link active" aria-current="page" href="{{ asset('/') }}">Home</a> --}}
+// {{-- <a class="nav-link active" aria-current="page" href="{{ URL::to('/') }}">Home</a> --}}
+// {{-- <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a> --}}
+
