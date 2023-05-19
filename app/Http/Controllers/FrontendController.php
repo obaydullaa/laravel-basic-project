@@ -16,9 +16,9 @@ class FrontendController extends Controller
         return view('front-page');
     }
     
-    public function hello()
+    public function aboutpage()
     {
-        return view('hello');
+        return view('aboutpage');
     }
 
 

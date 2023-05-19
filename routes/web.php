@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 // } );
 
 Route::get('/',[App\Http\Controllers\FrontendController::class, 'frontpage']);
-Route::get('/hello',[App\Http\Controllers\FrontendController::class, 'hello']);
+Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutpage']);
 
 
