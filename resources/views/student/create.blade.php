@@ -13,30 +13,35 @@
 	
 
 	<div class="wrap shadow">
-		<a class="btn btn-sm btn-primary mb-2" href="{{route('student.index')}}">Back</a>
+		<a class="btn btn-sm btn-primary mb-2" href="{{route('student.store')}}">Back</a>
 
 		<div class="card">
 			<div class="card-body">
-				<h2>Sign Up</h2>
-				<form action="">
+				<h2>Add New Student</h2>
+				<form action="{{route('student.store')}}" method="POST" enctype="multipart/form-data" autocomplete="off">
+					@csrf
 					<div class="form-group">
 						<label for="">Name</label>
-						<input class="form-control" type="text">
+						<input  name="name" class="form-control" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Email</label>
-						<input class="form-control" type="text">
+						<input name="email" class="form-control" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Cell</label>
-						<input class="form-control" type="text">
+						<input name="cell" class="form-control" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Username</label>
 						<input class="form-control" type="text">
 					</div>
 					<div class="form-group">
-						<input class="btn btn-primary" type="submit" value="Sign Up">
+						<label for="">Photo</label>
+						<input name="photo" class="" type="file">
+					</div>
+					<div class="form-group">
+						<input name="uname" class="btn btn-primary" type="submit" value="Sign Up">
 					</div>
 				</form>
 			</div>

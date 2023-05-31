@@ -475,3 +475,26 @@ class StudentController extends Controller
 // declare route 
 // ==============
 <a class="btn btn-sm btn-primary mb-2" href="{{route('student.create')}}">Add New Student</a>
+
+
+
+/**
+ * Laravel part 26 ( form setup )
+ * ==============================================================
+ * 
+*/
+
+<form action="{{route('student.store')}}" method="POST" enctype="multipart/form-data" autocomplete="off">
+@csrf
+
+// ========
+    /**
+     * Store Student
+     */
+    public function store()
+    {
+       echo "I Am Here";
+    }
+
+    // post 
+Route::post('/student/store', [App\Http\Controllers\StudentController::class, 'store'])->name('student.store');

@@ -21,6 +21,13 @@ class StudentController extends Controller
         return view('student.create');
     }
     /**
+     * Store Student
+     */
+    public function store()
+    {
+       echo "I Am Here";
+    }
+    /**
      * Edit view Student
      */
     public function edit()
