@@ -423,3 +423,55 @@ $age = 10;
  * ==============================================================
  * 
 */
+//web.php
+//================
+Route::get('/student', [App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
+Route::get('/student/create', [App\Http\Controllers\StudentController::class, 'create'])->name('student.create');
+Route::get('/student/edit', [App\Http\Controllers\StudentController::class, 'edit'])->name('student.edit');
+Route::get('/student/show', [App\Http\Controllers\StudentController::class, 'edit'])->name('student.show');
+
+
+//StudentController
+//=========================
+class StudentController extends Controller
+{
+    /**
+     * Load All Student
+     */
+    public function index()
+    {
+        return view('student.index');
+    }
+    /**
+     * Add new Student
+     */
+    public function create()
+    {
+        return view('student.create');
+    }
+    /**
+     * Edit view Student
+     */
+    public function edit()
+    {
+        return view('student.edit');
+    }
+    /**
+     * Show view Student
+     */
+    public function show()
+    {
+        return view('student.show');
+    }
+}
+
+
+// Link asset
+//==================
+<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+
+// declare route 
+// ==============
+<a class="btn btn-sm btn-primary mb-2" href="{{route('student.create')}}">Add New Student</a>
