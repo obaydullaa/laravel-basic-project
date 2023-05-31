@@ -17,9 +17,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // } );
 
-Route::get('/',[App\Http\Controllers\FrontendController::class, 'frontpage'])->name('home');
-Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutpage'])->name('about');
+// Route::get('/',[App\Http\Controllers\FrontendController::class, 'frontpage'])->name('home');
+// Route::get('/about',[App\Http\Controllers\FrontendController::class, 'aboutpage'])->name('about');
 
-Route::get('test', function() {
-    return view('test');
-});
+// Route::get('test', function() {
+//     return view('test');
+// });
+
+Route::get('/student', [App\Http\Controllers\StudentController::class, 'index'])->name('student.index');
+Route::get('/student/create', [App\Http\Controllers\StudentController::class, 'create'])->name('student.create');
+Route::get('/student/edit', [App\Http\Controllers\StudentController::class, 'edit'])->name('student.edit');
+Route::get('/student/show', [App\Http\Controllers\StudentController::class, 'edit'])->name('student.show');
