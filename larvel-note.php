@@ -516,9 +516,49 @@ Route::post('/student/store', [App\Http\Controllers\StudentController::class, 's
 
 
 /**
- * Laravel part 29 ( student darta add  )
+ * Laravel part 28 ( model migration  )
  * ==============================================================
- * 
+ * php artisan make:model Student -m
+ *  php artisan migrate
 */
 
 
+
+public function store(Request $request)
+{
+    Student::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'cell' => $request->cell,
+        'uname' => $request->uname,
+    ]);
+    return back();
+}
+
+/**
+ * Laravel part 30 ( session msg )
+ * ==============================================================
+ * 
+*/
+    /**
+     * Store Student
+     */
+    public function store(Request $request)
+    {
+        Student::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'cell' => $request->cell,
+            'uname' => $request->uname,
+        ]);
+        return back() ->with('success','Thanks '.$request->name.' for your Registration');
+    }
+
+    <div class="card-body">
+        <h2>Add New Student</h2>
+        @if (Session::has('success'))
+            <p class="alert alert-success">{{Session::get('success')}} 
+                <button class="close" data-dismiss="alert">&times;</button>
+            </p>
+            
+        @endif

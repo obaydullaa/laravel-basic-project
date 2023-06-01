@@ -18,6 +18,12 @@
 		<div class="card">
 			<div class="card-body">
 				<h2>Add New Student</h2>
+				@if (Session::has('success'))
+					<p class="alert alert-success">{{Session::get('success')}} 
+						<button class="close" data-dismiss="alert">&times;</button>
+					</p>
+					
+				@endif
 				<form action="{{route('student.store')}}" method="POST" enctype="multipart/form-data" autocomplete="off">
 					@csrf
 					<div class="form-group">
