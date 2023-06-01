@@ -512,3 +512,13 @@ Route::post('/student/store', [App\Http\Controllers\StudentController::class, 's
     {
        return $request->all();
     }
+
+
+
+/**
+ * Laravel part 29 ( student darta add  )
+ * ==============================================================
+ * 
+*/
+
+
