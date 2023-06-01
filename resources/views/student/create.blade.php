@@ -34,14 +34,14 @@
 					</div>
 					<div class="form-group">
 						<label for="">Username</label>
-						<input class="form-control" type="text">
+						<input name="uname" class="form-control" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Photo</label>
 						<input name="photo" class="" type="file">
 					</div>
 					<div class="form-group">
-						<input name="uname" class="btn btn-primary" type="submit" value="Sign Up">
+						<input class="btn btn-primary" type="submit" value="Sign Up">
 					</div>
 				</form>
 			</div>

@@ -498,3 +498,17 @@ class StudentController extends Controller
 
     // post 
 Route::post('/student/store', [App\Http\Controllers\StudentController::class, 'store'])->name('student.store');
+
+
+/**
+ * Laravel part 27 ( data get from form  )
+ * ==============================================================
+ * 
+*/
+    /**
+     * Store Student
+     */
+    public function store(Request $request)
+    {
+       return $request->all();
+    }

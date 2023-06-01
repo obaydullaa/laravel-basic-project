@@ -9,6 +9,7 @@ class StudentController extends Controller
     /**
      * Load All Student
      */
+    
     public function index()
     {
         return view('student.index');
@@ -20,13 +21,15 @@ class StudentController extends Controller
     {
         return view('student.create');
     }
+
     /**
      * Store Student
      */
-    public function store()
+    public function store(Request $request)
     {
-       echo "I Am Here";
+       return $request->all();
     }
+
     /**
      * Edit view Student
      */
@@ -34,6 +37,7 @@ class StudentController extends Controller
     {
         return view('student.edit');
     }
+
     /**
      * Show view Student
      */
