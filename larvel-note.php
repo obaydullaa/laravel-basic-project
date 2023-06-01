@@ -535,11 +535,6 @@ public function store(Request $request)
     return back();
 }
 
-/**
- * Laravel part 30 ( session msg )
- * ==============================================================
- * 
-*/
     /**
      * Store Student
      */
@@ -562,3 +557,25 @@ public function store(Request $request)
             </p>
             
         @endif
+
+
+/**
+ * Laravel part 31 ( image upload )
+ * ==============================================================
+ * 
+*/
+$unique_name = '';
+if($request->hasFile('photo')){
+    $img = $request -> file('photo');
+    $unique_name = md5(time().rand()).'.'. $img -> getClientOriginalExtension();
+    $img -> move(public_path('media/students'), $unique_name) ;
+}
+Student::create([
+    'name' => $request->name,
+    'email' => $request->email,
+    'cell' => $request->cell,
+    'uname' => $request->uname,
+    'photo' => $unique_name,  // image db name 
+]);
+return back() ->with('success','Thanks '.$request->name.' for your Registration');
+}

@@ -27,11 +27,18 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        $unique_name = '';
+        if($request->hasFile('photo')){
+            $img = $request -> file('photo');
+            $unique_name = md5(time().rand()).'.'. $img -> getClientOriginalExtension();
+            $img -> move(public_path('media/students'), $unique_name) ;
+        }
         Student::create([
             'name' => $request->name,
             'email' => $request->email,
             'cell' => $request->cell,
             'uname' => $request->uname,
+            'photo' => $unique_name,
         ]);
         return back() ->with('success','Thanks '.$request->name.' for your Registration');
     }
