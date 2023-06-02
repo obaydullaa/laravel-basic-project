@@ -12,7 +12,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('student.index');
+        $data = student::all();
+        return view('student.index', [
+            'all_data'  => $data,
+        ]);
     }
     /**
      * Add new Student

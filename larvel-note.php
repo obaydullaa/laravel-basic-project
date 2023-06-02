@@ -413,6 +413,11 @@ $age = 10;
 // 
 
 /**
+ *--------------------------------------------- Curd Template Start ------------------------------------------
+ * <==========================================================================================================>
+ */
+
+/**
  * Laravel part 24 ( crud templates )
  * ==============================================================
  * curd template folder
@@ -558,11 +563,6 @@ public function store(Request $request)
             
         @endif
 
-
-/**
- * Laravel part 31 ( image upload )
- * ==============================================================
- * 
 */
 $unique_name = '';
 if($request->hasFile('photo')){
@@ -579,3 +579,10 @@ Student::create([
 ]);
 return back() ->with('success','Thanks '.$request->name.' for your Registration');
 }
+
+
+
+/**
+ *  Laravel part 32 (  data show   )
+ * ==============================================================
+ * 
