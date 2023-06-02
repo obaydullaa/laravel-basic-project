@@ -55,10 +55,19 @@ class StudentController extends Controller
     }
     
     /**
-     * Show view Student
+     * Show single user
      */
     public function show()
     {
         return view('student.show');
+    }
+    /**
+     * Delete user
+     */
+    public function destroy($id)
+    {
+        $delete_data = student::find($id);
+        $delete_data -> delete();
+        return back() -> with('success', 'Student Data Delete.');
     }
 }

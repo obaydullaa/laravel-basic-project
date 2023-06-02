@@ -15,6 +15,12 @@
 		<div class="card">
 			<div class="card-body">
 				<h2>All Students</h2>
+				@if (Session::has('success'))
+					<p class="alert alert-success">{{Session::get('success')}} 
+						<button class="close" data-dismiss="alert">&times;</button>
+					</p>
+					
+				@endif
 				<table class="table table-striped">
 					<thead>
 						<tr>
@@ -40,14 +46,10 @@
 								<td>
 									<a class="btn btn-sm btn-info" href="{{route('student.show')}}">View</a>
 									<a class="btn btn-sm btn-warning" href="{{route('student.edit')}}">Edit</a>
-									<a class="btn btn-sm btn-danger" href="#">Delete</a>
+									<a class="btn btn-sm btn-danger" href="{{route('student.destroy', $data ->id)}}">Delete</a>
 								</td>
 							</tr>
-							
 						@endforeach
-						
-						
-
 					</tbody>
 				</table>
 			</div>

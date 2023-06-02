@@ -586,3 +586,28 @@ return back() ->with('success','Thanks '.$request->name.' for your Registration'
  *  Laravel part 32 (  data show   )
  * ==============================================================
  * 
+<tbody>
+    @foreach ($all_data as $data )
+        <tr>
+            <td>{{$loop -> index + 1}}</td>
+            {{-- <td>{{$data->id}}</td> --}}
+            <td>{{$data->name}}</td>
+            <td>{{$data->email}}</td>
+            <td>{{$data->cell}}</td>
+            <td><img src="{{url('')}}/media/students/{{$data->photo}}" alt=""></td>
+            {{-- <td><img src="{{URL::to('')}}/media/students/{{$data->photo}}" alt=""></td> --}}
+            {{-- <td><img src="{{asset('')}}media/students/{{$data->photo}}" alt=""></td> --}}
+            <td>
+                <a class="btn btn-sm btn-info" href="{{route('student.show')}}">View</a>
+                <a class="btn btn-sm btn-warning" href="{{route('student.edit')}}">Edit</a>
+                <a class="btn btn-sm btn-danger" href="#">Delete</a>
+            </td>
+        </tr>
+    @endforeach
+</tbody>
+
+
+/**
+ *  Laravel part 33 ( data delete )
+ * ==============================================================
+ * 
