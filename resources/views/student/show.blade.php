@@ -18,11 +18,6 @@
 		<div class="card">
 			<div class="card-body">
 				<h2>{{$user_data-> name}}</h2>
-				@if (Session::has('success'))
-					<p class="alert alert-success">{{Session::get('success')}} 
-						<button class="close" data-dismiss="alert">&times;</button>
-					</p>
-				@endif
 				<img class="mb-2" width="150px" src="{{URL::to('/')}}/media/students/{{$user_data->photo}}" alt="">
 				<h2>{{$user_data-> name}}</h2>
 				<p>{{$user_data-> cell}}</p>

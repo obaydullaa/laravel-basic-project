@@ -635,3 +635,25 @@ Route::get('/student/destroy/{id}', [App\Http\Controllers\StudentController::cla
  * ==============================================================
  * 
  * /
+ Route::get('/student/show/{id}', [App\Http\Controllers\StudentController::class, 'show'])->name('student.show');
+
+     /**
+     * Show single user
+     */
+    public function show($id)
+    {
+        $data = student::find($id);
+
+        return view('student.show' , [
+            'user_data' => $data,
+        ]);
+    }
+
+    <div class="card">
+			<div class="card-body">
+				<h2>{{$user_data-> name}}</h2>
+				<img class="mb-2" width="150px" src="{{URL::to('/')}}/media/students/{{$user_data->photo}}" alt="">
+				<h2>{{$user_data-> name}}</h2>
+				<p>{{$user_data-> cell}}</p>
+			</div> 
+		</div>
