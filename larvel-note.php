@@ -608,6 +608,30 @@ return back() ->with('success','Thanks '.$request->name.' for your Registration'
 
 
 /**
- *  Laravel part 33 ( data delete )
+ *  Laravel part 33 ( data delete  )
  * ==============================================================
  * 
+ * /
+
+Route::get('/student/destroy/{id}', [App\Http\Controllers\StudentController::class, 'destroy'])->name('student.destroy'); 
+
+/**
+ * Delete user
+ * Studentcontroller
+ */
+    public function destroy($id)
+    {
+        $delete_data = student::find($id);
+        $delete_data -> delete();
+        return back() -> with('success', 'Student Data Delete.');
+    }
+
+    <a class="btn btn-sm btn-danger" href="{{route('student.destroy', $data ->id)}}">Delete</a>
+
+
+
+/**
+ *  Laravel part 34 ( view )
+ * ==============================================================
+ * 
+ * /

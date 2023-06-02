@@ -17,29 +17,16 @@
 
 		<div class="card">
 			<div class="card-body">
-				<h2>Edit Data</h2>
-				<form action="">
-					<div class="form-group">
-						<label for="">Name</label>
-						<input class="form-control" type="text">
-					</div>
-					<div class="form-group">
-						<label for="">Email</label>
-						<input class="form-control" type="text">
-					</div>
-					<div class="form-group">
-						<label for="">Cell</label>
-						<input class="form-control" type="text">
-					</div>
-					<div class="form-group">
-						<label for="">Username</label>
-						<input class="form-control" type="text">
-					</div>
-					<div class="form-group">
-						<input class="btn btn-primary" type="submit" value="Sign Up">
-					</div>
-				</form>
-			</div>
+				<h2>{{$user_data-> name}}</h2>
+				@if (Session::has('success'))
+					<p class="alert alert-success">{{Session::get('success')}} 
+						<button class="close" data-dismiss="alert">&times;</button>
+					</p>
+				@endif
+				<img class="mb-2" width="150px" src="{{URL::to('/')}}/media/students/{{$user_data->photo}}" alt="">
+				<h2>{{$user_data-> name}}</h2>
+				<p>{{$user_data-> cell}}</p>
+			</div> 
 		</div>
 	</div>
 	

@@ -13,7 +13,7 @@
 	
 
 	<div class="wrap shadow">
-		<a class="btn btn-sm btn-primary mb-2" href="{{route('student.store')}}">Back</a>
+		<a class="btn btn-sm btn-primary mb-2" href="{{route('student.index')}}">Back</a>
 
 		<div class="card">
 			<div class="card-body">

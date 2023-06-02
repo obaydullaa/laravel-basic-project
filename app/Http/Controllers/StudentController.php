@@ -57,9 +57,13 @@ class StudentController extends Controller
     /**
      * Show single user
      */
-    public function show()
+    public function show($id)
     {
-        return view('student.show');
+        $data = student::find($id);
+
+        return view('student.show' , [
+            'user_data' => $data,
+        ]);
     }
     /**
      * Delete user
