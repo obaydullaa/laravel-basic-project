@@ -30,6 +30,14 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        $this-> validate($request, [
+            'name' => ['required'],
+            'email' => ['required', 'unique:students'],
+            'uname' => ['min:5','max:10']
+
+            // 'name' => 'required'
+        ]);
+
         $unique_name = '';
         if($request->hasFile('photo')){
             $img = $request -> file('photo');
