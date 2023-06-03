@@ -56,16 +56,21 @@ class StudentController extends Controller
             'edit_data' => $data
         ]);
     }
-    
+
     /**
      * Updated Student
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
-        $data = student::find($id);
-        return view('student.edit', [
-            'edit_data' => $data
-        ]);
+        $update_data = student::find($id);
+        $update_data -> name = $request -> name;
+        $update_data -> email = $request -> email;
+        $update_data -> cell = $request -> cell;
+        $update_data -> uname = $request -> uname;
+
+        $update_data-> update();
+        
+        return back() -> with('success', 'Student Data Delete.');
     }
     
     /**

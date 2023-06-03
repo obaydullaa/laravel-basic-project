@@ -678,28 +678,54 @@ public function edit($id)
     ]);
 }
 
+
+/**
+ * Updated Student
+ */
+public function update(Request $request, $id)
+{
+    $update_data = student::find($id);
+    $update_data -> name = $request -> name;
+    $update_data -> email = $request -> email;
+    $update_data -> cell = $request -> cell;
+    $update_data -> uname = $request -> uname;
+
+    $update_data-> update();
+    
+    return back() -> with('success', 'Student Data Delete.');
+}
+    
+
+// edit.blade.php
 <div class="card">
     <div class="card-body">
+        @if (Session::has('success'))
+            <p class="alert alert-success">{{Session::get('success')}} 
+                <button class="close" data-dismiss="alert">&times;</button>
+            </p>
+            
+        @endif
         <h2>Edit Data {{$edit_data -> name}}</h2>
-        <form action="">
+        <form action="{{route('student.update', $edit_data -> id)}}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="form-group">
-                <label  for="">Name</label>
-                <input class="form-control" value="{{$edit_data -> name}}" type="text">
+                <label for="">Name</label>
+                <input name="name" class="form-control" value="{{$edit_data -> name}}" type="text">
             </div>
             <div class="form-group">
                 <label for="">Email</label>
-                <input class="form-control" value="{{$edit_data -> email}}" type="text">
+                <input name="email" class="form-control" value="{{$edit_data -> email}}" type="text">
             </div>
             <div class="form-group">
                 <label for="">Cell</label>
-                <input class="form-control" value="{{$edit_data -> cell}}" type="text">
+                <input name="cell" class="form-control" value="{{$edit_data -> cell}}" type="text">
             </div>
             <div class="form-group">
                 <label for="">Username</label>
-                <input class="form-control" value="{{$edit_data -> uname}}" type="text">
+                <input name="uname" class="form-control" value="{{$edit_data -> uname}}" type="text">
             </div>
             <div class="form-group">
-                <input class="btn btn-primary" type="submit" value="Sign Up">
+                <input class="btn btn-primary" type="submit" value="Updated">
             </div>
         </form>
     </div>
