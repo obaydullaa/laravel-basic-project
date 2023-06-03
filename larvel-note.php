@@ -657,3 +657,50 @@ Route::get('/student/destroy/{id}', [App\Http\Controllers\StudentController::cla
 				<p>{{$user_data-> cell}}</p>
 			</div> 
 		</div>
+
+
+/**
+ *  Laravel part 35 ( update )
+ * ==============================================================
+ * 
+ */
+
+Route::get('/student/edit/{id}', [App\Http\Controllers\StudentController::class, 'edit'])->name('student.edit');
+
+/**
+ * Edit view Student
+ */
+public function edit($id)
+{
+    $data = student::find($id);
+    return view('student.edit', [
+        'edit_data' => $data
+    ]);
+}
+
+<div class="card">
+    <div class="card-body">
+        <h2>Edit Data {{$edit_data -> name}}</h2>
+        <form action="">
+            <div class="form-group">
+                <label  for="">Name</label>
+                <input class="form-control" value="{{$edit_data -> name}}" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input class="form-control" value="{{$edit_data -> email}}" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Cell</label>
+                <input class="form-control" value="{{$edit_data -> cell}}" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Username</label>
+                <input class="form-control" value="{{$edit_data -> uname}}" type="text">
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Sign Up">
+            </div>
+        </form>
+    </div>
+</div>

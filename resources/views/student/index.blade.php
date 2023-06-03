@@ -45,7 +45,7 @@
 								{{-- <td><img src="{{asset('')}}media/students/{{$data->photo}}" alt=""></td> --}}
 								<td>
 									<a class="btn btn-sm btn-info" href="{{route('student.show', $data -> id)}}">View</a>
-									<a class="btn btn-sm btn-warning" href="{{route('student.edit')}}">Edit</a>
+									<a class="btn btn-sm btn-warning" href="{{route('student.edit', $data -> id)}}">Edit</a>
 									<a class="btn btn-sm btn-danger" href="{{route('student.destroy', $data ->id)}}">Delete</a>
 								</td>
 							</tr>

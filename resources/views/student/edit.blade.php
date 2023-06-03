@@ -17,23 +17,23 @@
 
 		<div class="card">
 			<div class="card-body">
-				<h2>Edit Data</h2>
+				<h2>Edit Data {{$edit_data -> name}}</h2>
 				<form action="">
 					<div class="form-group">
-						<label for="">Name</label>
-						<input class="form-control" type="text">
+						<label  for="">Name</label>
+						<input class="form-control" value="{{$edit_data -> name}}" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Email</label>
-						<input class="form-control" type="text">
+						<input class="form-control" value="{{$edit_data -> email}}" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Cell</label>
-						<input class="form-control" type="text">
+						<input class="form-control" value="{{$edit_data -> cell}}" type="text">
 					</div>
 					<div class="form-group">
 						<label for="">Username</label>
-						<input class="form-control" type="text">
+						<input class="form-control" value="{{$edit_data -> uname}}" type="text">
 					</div>
 					<div class="form-group">
 						<input class="btn btn-primary" type="submit" value="Sign Up">
