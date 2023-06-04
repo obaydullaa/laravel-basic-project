@@ -730,3 +730,106 @@ public function update(Request $request, $id)
         </form>
     </div>
 </div>
+
+
+/**
+ *  Laravel part 35 ( update )
+ * ==============================================================
+ * 
+ */
+public function store(Request $request)
+{
+    $this->validate($request, [
+        'name' => ['required'],
+        'email' => ['required', 'unique:students', 'email'],
+        'cell' => ['required', 'numeric', 'digits_between:11,13', 'regex:/^(01|\+?8801)[1-9]\d{8}$/'],
+        'uname' => ['min:5', 'max:10']
+    ]);
+    <div class="card-body">
+    <h2>Add New Student</h2>
+    @if (Session::has('success'))
+        <p class="alert alert-success">{{Session::get('success')}} 
+            <button class="close" data-dismiss="alert">&times;</button>
+        </p>
+        
+    @endif
+    @if ($errors->any())
+
+        <p class="alert alert-danger">{{$errors->first()}} 
+            <button class="close" data-dismiss="alert">&times;</button>
+        </p>
+            
+
+    @endif
+    <form action="{{route('student.store')}}" method="POST" enctype="multipart/form-data" autocomplete="off">
+}
+
+// final step validation 
+
+public function store(Request $request)
+{
+    $this->validate($request, [
+        'name' => ['required'],
+        'email' => ['required', 'unique:students', 'email'],
+        'cell' => ['required', 'numeric', 'digits_between:11,13', 'regex:/^(01|\+?8801)[1-9]\d{8}$/'],
+        'uname' => ['min:5', 'max:10']
+    ],[
+        'name.required' => 'নামের ঘরটি ঘালি রাখা যাবে না',
+        'cell.numeric' => 'সঠিক নাম্বার বসান',
+    ]);
+}
+
+
+// create.blade.php 
+<div class="card">
+<div class="card-body">
+    <h2>Add New Student</h2>
+
+    /// use this step form validation,,,
+
+
+    @if (Session::has('success'))
+        <p class="alert alert-success">{{Session::get('success')}} 
+            <button class="close" data-dismiss="alert">&times;</button>
+        </p>
+        
+    @endif
+    @if ($errors->any())
+        @foreach ($errors->all() as $err)
+            <p class="alert alert-danger">{{$err}} 
+                <button class="close" data-dismiss="alert">&times;</button>
+            </p>
+            
+        @endforeach
+    @endif
+
+
+
+    <form action="{{route('student.store')}}" method="POST" enctype="multipart/form-data" autocomplete="off">
+        @csrf
+        <div class="form-group">
+            <label for="">Name</label>
+            <input  name="name" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input name="email" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="">Cell</label>
+            <input name="cell" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="">Username</label>
+            <input name="uname" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="">Photo</label>
+            <input name="photo" class="" type="file">
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Sign Up">
+        </div>
+    </form>
+</div>
+</div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
+
 class StudentController extends Controller
 {
     /**
@@ -30,14 +31,15 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $this-> validate($request, [
+        $this->validate($request, [
             'name' => ['required'],
-            'email' => ['required', 'unique:students'],
-            'uname' => ['min:5','max:10']
-
-            // 'name' => 'required'
+            'email' => ['required', 'unique:students', 'email'],
+            'cell' => ['required', 'numeric', 'digits_between:11,13', 'regex:/^(01|\+?8801)[1-9]\d{8}$/'],
+            'uname' => ['min:5', 'max:10']
+        ],[
+            'name.required' => 'নামের ঘরটি ঘালি রাখা যাবে না',
+            'cell.numeric' => 'সঠিক নাম্বার বসান',
         ]);
-
         $unique_name = '';
         if($request->hasFile('photo')){
             $img = $request -> file('photo');

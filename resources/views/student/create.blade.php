@@ -25,9 +25,12 @@
 					
 				@endif
 				@if ($errors->any())
-				<p class="alert alert-danger">{{$errors->first()}} 
-					<button class="close" data-dismiss="alert">&times;</button>
-				</p>
+					@foreach ($errors->all() as $err)
+						<p class="alert alert-danger">{{$err}} 
+							<button class="close" data-dismiss="alert">&times;</button>
+						</p>
+						
+					@endforeach
 				@endif
 				<form action="{{route('student.store')}}" method="POST" enctype="multipart/form-data" autocomplete="off">
 					@csrf
