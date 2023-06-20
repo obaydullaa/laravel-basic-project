@@ -5,7 +5,7 @@
  * ===========================================================================
  */
 
-// 1. php artisan create-project laravel/laravel my-pp
+// 1. composer create-project laravel/laravel my-pp
 // 2. php artisan make:controller StudentController  // plean controller
 // 3. php artisan make:controller StaffConroller --resource  // create all features
 // 4. php artisan r:l  // create all features
@@ -422,6 +422,7 @@ $age = 10;
  * ==============================================================
  * curd template folder
 */
+views -> student -> index.blade.php, show.blade.php, create.blade.php, edit.blade.php, trash.blade.php
 
 /**
  * Laravel part 25 ( crud template setup )
@@ -526,7 +527,6 @@ Route::post('/student/store', [App\Http\Controllers\StudentController::class, 's
  * php artisan make:model Student -m
  *  php artisan migrate
 */
-
 
 
 public function store(Request $request)
